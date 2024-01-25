@@ -1,21 +1,21 @@
 @charset "UTF-8";
 :root {
-  /* Step -2: 11.26px → 14.63px */
-  --step--2: clamp(0.7038rem, 0.6616rem + 0.2106vw, 0.9144rem);
-  /* Step -1: 15.00px → 19.50px */
-  --step--1: clamp(0.9375rem, 0.8813rem + 0.2813vw, 1.2188rem);
-  /* Step 0: 20.00px → 26.00px */
-  --step-0: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
-  /* Step 1: 26.66px → 34.66px */
-  --step-1: clamp(1.6663rem, 1.5663rem + 0.5vw, 2.1662rem);
-  /* Step 2: 35.54px → 46.20px */
-  --step-2: clamp(2.2213rem, 2.088rem + 0.6663vw, 2.8875rem);
-  /* Step 3: 47.37px → 61.58px */
-  --step-3: clamp(2.9606rem, 2.783rem + 0.8881vw, 3.8488rem);
-  /* Step 4: 63.15px → 82.09px */
-  --step-4: clamp(3.9469rem, 3.7101rem + 1.1838vw, 5.1306rem);
-  /* Step 5: 84.17px → 109.43px */
-  --step-5: clamp(5.2606rem, 4.9449rem + 1.5788vw, 6.8394rem);
+  /* Step -2: 15.278px → 11.52px */
+  --step--2: clamp(0.72rem, 1.002rem + -0.235vi, 0.955rem);
+  /* Step -1: 18.333px → 14.4px */
+  --step--1: clamp(0.9rem, 1.195rem + -0.246vi, 1.146rem);
+  /* Step 0: 22px → 18px */
+  --step-0: clamp(1.125rem, 1.425rem + -0.25vi, 1.375rem);
+  /* Step 1: 26.4px → 22.5px */
+  --step-1: clamp(1.406rem, 1.699rem + -0.244vi, 1.65rem);
+  /* Step 2: 31.68px → 28.125px */
+  --step-2: clamp(1.758rem, 2.024rem + -0.222vi, 1.98rem);
+  /* Step 3: 38.016px → 35.156px */
+  --step-3: clamp(2.197rem, 2.412rem + -0.179vi, 2.376rem);
+  /* Step 4: 45.619px → 43.945px */
+  --step-4: clamp(2.747rem, 2.872rem + -0.105vi, 2.851rem);
+  /* Step 5: 54.743px → 54.932px */
+  --step-5: clamp(3.421rem, 3.419rem + 0.012vi, 3.433rem);
 }
 
 * {
@@ -73,7 +73,7 @@ body {
   align-items: center;
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-logo {
-  font-size: var(--step-1);
+  font-size: var(--step-3);
   font-weight: 500;
   line-height: 1.75rem;
 }
@@ -82,7 +82,7 @@ body {
   display: flex;
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu .wrapper-1-menu-item {
-  font-size: var(--step--1);
+  font-size: var(--step-1);
   font-weight: 400;
   padding: 0 1.5rem;
 }
@@ -90,7 +90,7 @@ body {
   margin: 5vmax 0 0 10%;
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-title {
-  font-size: var(--step-3);
+  font-size: var(--step-5);
   font-weight: 500;
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-title span {
@@ -108,14 +108,14 @@ body {
   z-index: -1;
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-description {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 300;
   width: 45%;
   margin: 1.5rem 0 4.5rem 0;
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-btn {
   padding: 0.7rem 2rem;
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   background-color: #f1c40f;
 }
 
@@ -135,11 +135,11 @@ body {
   justify-content: center;
 }
 .wrapper-2 .wrapper-2-item .wrapper-2-item-number {
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   font-weight: 500;
 }
 .wrapper-2 .wrapper-2-item .wrapper-2-item-description {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 300;
 }
 
@@ -168,11 +168,11 @@ body {
   justify-content: center;
 }
 .wrapper-3 .wrapper-3-content .wrapper-3-content-title {
-  font-size: var(--step-1);
+  font-size: var(--step-3);
   font-weight: 600;
 }
 .wrapper-3 .wrapper-3-content .wrapper-3-content-description {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 300;
   margin-top: 1rem;
 }
@@ -198,9 +198,9 @@ body {
 }
 
 .wrapper-4 {
-  width: 100%;
+  width: 70%;
   max-width: 2048px;
-  padding: 8rem 15%;
+  padding: 8rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,11 +213,11 @@ body {
   margin-right: -5%;
 }
 .wrapper-4 .wrapper-4-content .wrapper-4-content-title {
-  font-size: var(--step-1);
+  font-size: var(--step-3);
   font-weight: 600;
 }
 .wrapper-4 .wrapper-4-content .wrapper-4-content-description {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 300;
   margin-top: 1.5rem;
 }
@@ -240,7 +240,7 @@ body {
   justify-content: center;
 }
 .wrapper-5 .wrapper-5-title {
-  font-size: var(--step-1);
+  font-size: var(--step-3);
   font-weight: 600;
 }
 .wrapper-5 .wrapper-5-content {
@@ -278,12 +278,12 @@ body {
   background-image: url(../assets/graphics/face4.jpg);
 }
 .wrapper-5 .wrapper-5-content .wrapper-5-item .wrapper-5-item-title {
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   font-weight: 400;
   margin: 1rem 0;
 }
 .wrapper-5 .wrapper-5-content .wrapper-5-item .wrapper-5-item-description {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 300;
   text-align: center;
 }
@@ -302,13 +302,13 @@ body {
   flex-direction: column;
 }
 .wrapper-6 .wrapper-6-content .wrapper-6-content-title {
-  font-size: var(--step-1);
+  font-size: var(--step-4);
   font-weight: 600;
   color: #f6f6f7;
   margin-bottom: 2rem;
 }
 .wrapper-6 .wrapper-6-content .wrapper-6-content-description {
-  font-size: var(--step--1);
+  font-size: var(--step-1);
   font-weight: 400;
   color: #f6f6f7;
   margin: 1rem 0 1rem 0;
@@ -325,7 +325,7 @@ body {
   background-color: #f1c40f;
 }
 .wrapper-6 .wrapper-6-form .wrapper-6-form-title {
-  font-size: var(--step-0);
+  font-size: var(--step-3);
   grid-column: 1/5;
   padding: 1rem 0;
   color: #f6f6f7;
@@ -333,7 +333,7 @@ body {
 .wrapper-6 .wrapper-6-form .wrapper-6-form-input {
   background-color: rgb(232, 232, 232);
   border: none;
-  font-size: var(--step--2);
+  font-size: var(--step--1);
   padding: 1rem;
   border-radius: 1rem;
   height: 2.5rem;
@@ -360,7 +360,7 @@ body {
 }
 .wrapper-6 .wrapper-6-form .wrapper-6-form-btn {
   grid-column: 4/5;
-  font-size: var(--step--2);
+  font-size: var(--step--1);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border: none;
