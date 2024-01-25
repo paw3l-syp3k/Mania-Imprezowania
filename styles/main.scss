@@ -194,13 +194,22 @@ body {
   background-image: url(../assets/graphics/party.jpg);
 }
 
+.wrapper-test {
+  width: 100%;
+  height: 8rem;
+  background-image: url(../assets/graphics/test.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .wrapper-4 {
-  width: 70%;
+  width: 100%;
   max-width: 2048px;
-  padding: 8rem 0;
+  padding: 8rem 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .wrapper-4-content {
     background-color: $main-color;
     padding: 3rem;
@@ -253,10 +262,23 @@ body {
       padding: 2rem 1rem;
       border-radius: 1rem;
       .wrapper-5-item-photo {
-        width: 6rem;
-        height: 6rem;
-        background-color: chartreuse;
+        width: 8rem;
+        height: 8rem;
+        background-position: center;
+        background-size: cover;
         border-radius: 100%;
+      }
+      .face1 {
+        background-image: url(../assets/graphics/face1.jpg);
+      }
+      .face2 {
+        background-image: url(../assets/graphics/face2.jpg);
+      }
+      .face3 {
+        background-image: url(../assets/graphics/face3.jpg);
+      }
+      .face4 {
+        background-image: url(../assets/graphics/face4.jpg);
       }
       .wrapper-5-item-title {
         font-size: var(--step-0);
@@ -267,6 +289,90 @@ body {
         font-size: var(--step--1);
         font-weight: 300;
         text-align: center;
+      }
+    }
+  }
+}
+
+.wrapper-6 {
+  width: 100%;
+  padding: 5rem 15%;
+  background-color: rgb(56, 56, 56);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .wrapper-6-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .wrapper-6-content-title {
+      font-size: var(--step-1);
+      font-weight: 600;
+      color: $white;
+      margin-bottom: 2rem;
+    }
+    .wrapper-6-content-description {
+      font-size: var(--step--1);
+      font-weight: 400;
+      color: $white;
+      margin: 1rem 0 1rem 0;
+    }
+    .main {
+      color: $main-color;
+    }
+  }
+  .wrapper-6-form {
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    background-color: $main-color;
+    .wrapper-6-form-title {
+      font-size: var(--step-0);
+      grid-column: 1/5;
+      padding: 1rem 0;
+      color: $white;
+    }
+    .wrapper-6-form-input {
+      background-color: $gray;
+      border: none;
+      font-size: var(--step--2);
+      padding: 1rem;
+      border-radius: 1rem;
+      height: 2.5rem;
+      &:focus {
+        outline: 2px solid black;
+      }
+    }
+    #name {
+      grid-column: 1/3;
+    }
+    #surname {
+      grid-column: 3/5;
+    }
+    #phone {
+      grid-column: 1/3;
+    }
+    #email {
+      grid-column: 3/5;
+    }
+    #msg {
+      grid-column: 1/5;
+      resize: none;
+      height: 10rem;
+    }
+    .wrapper-6-form-btn {
+      grid-column: 4/5;
+      font-size: var(--step--2);
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      border: none;
+      background-color: $white;
+      border-radius: 1rem;
+      &:hover {
+        background-color: rgb(16, 189, 16);
+        color: $white;
       }
     }
   }
