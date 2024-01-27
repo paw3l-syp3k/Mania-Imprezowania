@@ -83,7 +83,40 @@ body {
           font-size: var(--step-1);
           font-weight: 400;
           padding: 0 1.5rem;
+          &:hover {
+            color: $main-color;
+            transition: 150ms ease-in-out;
+          }
         }
+      }
+      .hamburger {
+        width: 3rem;
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        display: none;
+        .line {
+          width: 100%;
+          height: 5px;
+          background-color: black;
+          transition: 150ms ease-in-out;
+        }
+      }
+      .active {
+        justify-content: center;
+      }
+      .active .line:nth-child(2) {
+        display: none;
+      }
+      .active .line:nth-child(1) {
+        transform: rotate(45deg);
+        margin-bottom: -5px;
+      }
+      .active .line:nth-child(3) {
+        transform: rotate(-45deg);
       }
     }
   }
@@ -117,6 +150,10 @@ body {
       padding: 0.7rem 2rem;
       font-size: var(--step-0);
       background-color: $main-color;
+      &:hover {
+        transition: 150ms ease-in-out;
+        background-color: $gray;
+      }
     }
   }
 }

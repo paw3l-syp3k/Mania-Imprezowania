@@ -116,6 +116,11 @@ body {
           font-size: var(--step-1);
           font-weight: 400;
           padding: 0 1.5rem;
+          position: relative;
+          &:hover {
+            color: $main-color;
+            transition: 150ms ease-in-out;
+          }
         }
       }
     }
