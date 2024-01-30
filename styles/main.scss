@@ -64,6 +64,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    @media screen and (orientation: portrait) {
+      background-color: brown;
+    }
     .wrapper-1-header-navigation {
       width: 90%;
       margin: auto;
@@ -71,23 +74,50 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (orientation: portrait) {
+        background-color: green;
+      }
       .wrapper-1-header-logo {
         font-size: var(--step-3);
         font-weight: 500;
         line-height: 1.75rem;
+        @media screen and (orientation: portrait) {
+          font-size: var(--step-1);
+        }
       }
       .wrapper-1-header-menu {
         list-style: none;
         display: flex;
+        @media screen and (orientation: portrait) {
+          background-color: orange;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          flex-direction: column;
+          z-index: 2;
+          align-items: center;
+          justify-content: center;
+          transform: translateX(100%);
+          transition: 150ms ease-in-out;
+        }
         .wrapper-1-menu-item {
           font-size: var(--step-1);
           font-weight: 400;
           padding: 0 1.5rem;
+          @media screen and (orientation: portrait) {
+            padding: 0;
+            margin: 1rem 0;
+          }
           &:hover {
             color: $main-color;
             transition: 150ms ease-in-out;
           }
         }
+      }
+      .show-menu-mobile {
+        transform: translateX(0);
       }
       .hamburger {
         width: 3rem;
@@ -98,6 +128,10 @@ body {
         justify-content: space-between;
         cursor: pointer;
         display: none;
+        @media screen and (orientation: portrait) {
+          display: flex;
+          z-index: 3;
+        }
         .line {
           width: 100%;
           height: 5px;
@@ -125,9 +159,9 @@ body {
     .wrapper-1-content-title {
       font-size: var(--step-5);
       font-weight: 500;
+      z-index: -1;
       span {
         position: relative;
-        z-index: 1;
         &::before {
           content: '';
           position: absolute;
