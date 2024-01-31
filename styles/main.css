@@ -43,6 +43,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .wrapper-1 {
@@ -58,16 +59,16 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-1 {
+    background-image: unset;
+  }
+}
 .wrapper-1 .wrapper-1-header {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-@media screen and (orientation: portrait) {
-  .wrapper-1 .wrapper-1-header {
-    background-color: brown;
-  }
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation {
   width: 90%;
@@ -76,11 +77,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media screen and (orientation: portrait) {
-  .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation {
-    background-color: green;
-  }
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-logo {
   font-size: var(--step-3);
@@ -98,7 +94,7 @@ body {
 }
 @media screen and (orientation: portrait) {
   .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu {
-    background-color: orange;
+    background-color: #f6f6f7;
     position: absolute;
     top: 0;
     left: 0;
@@ -120,7 +116,7 @@ body {
 @media screen and (orientation: portrait) {
   .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu .wrapper-1-menu-item {
     padding: 0;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
   }
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu .wrapper-1-menu-item:hover {
@@ -211,6 +207,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-2 {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
 .wrapper-2 .wrapper-2-item {
   display: flex;
   flex-direction: column;
@@ -236,6 +239,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-3 {
+    padding: 3rem 0;
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+}
 .wrapper-3 .wrapper-3-img {
   width: 100%;
   height: 30rem;
@@ -243,12 +253,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-img {
+    height: 15rem;
+  }
+}
 .wrapper-3 .wrapper-3-content {
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-content {
+    padding: 2rem 0;
+  }
 }
 .wrapper-3 .wrapper-3-content .wrapper-3-content-title {
   font-size: var(--step-3);
@@ -266,6 +286,7 @@ body {
 
 .kids {
   background-image: url(../assets/graphics/kids.jpg);
+  grid-row: 3/4;
 }
 
 .party {
@@ -288,12 +309,25 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-4 {
+    padding: 2rem 0;
+    width: 90%;
+    flex-direction: column;
+  }
+}
 .wrapper-4 .wrapper-4-content {
   background-color: #f1c40f;
   padding: 3rem;
   z-index: 1;
   width: 55%;
   margin-right: -5%;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-content {
+    width: 100%;
+    margin: auto;
+  }
 }
 .wrapper-4 .wrapper-4-content .wrapper-4-content-title {
   font-size: var(--step-3);
@@ -312,6 +346,13 @@ body {
   background-size: cover;
   z-index: 0;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-photo {
+    width: 100%;
+    height: 25rem;
+    margin-top: 3rem;
+  }
+}
 
 .wrapper-5 {
   width: 70%;
@@ -322,6 +363,13 @@ body {
   align-items: flex-start;
   justify-content: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-5 {
+    width: 90%;
+    margin: auto;
+    padding: 3rem 0;
+  }
+}
 .wrapper-5 .wrapper-5-title {
   font-size: var(--step-3);
   font-weight: 600;
@@ -331,6 +379,12 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 4rem;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-content {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
 }
 .wrapper-5 .wrapper-5-content .wrapper-5-item {
   background-color: rgb(232, 232, 232);
@@ -378,6 +432,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-6 {
+    padding: 5rem 5%;
+    grid-template-columns: 1fr;
+  }
+}
 .wrapper-6 .wrapper-6-content {
   width: 100%;
   display: flex;
@@ -405,6 +465,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  margin-top: 2rem;
   background-color: #f1c40f;
 }
 .wrapper-6 .wrapper-6-form .wrapper-6-form-title {

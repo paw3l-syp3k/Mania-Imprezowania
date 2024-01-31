@@ -45,6 +45,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .wrapper-1 {
@@ -59,14 +60,14 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    background-image: unset;
+  }
   .wrapper-1-header {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    @media screen and (orientation: portrait) {
-      background-color: brown;
-    }
     .wrapper-1-header-navigation {
       width: 90%;
       margin: auto;
@@ -74,9 +75,6 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media screen and (orientation: portrait) {
-        background-color: green;
-      }
       .wrapper-1-header-logo {
         font-size: var(--step-3);
         font-weight: 500;
@@ -89,7 +87,7 @@ body {
         list-style: none;
         display: flex;
         @media screen and (orientation: portrait) {
-          background-color: orange;
+          background-color: $white;
           position: absolute;
           top: 0;
           left: 0;
@@ -108,7 +106,7 @@ body {
           padding: 0 1.5rem;
           @media screen and (orientation: portrait) {
             padding: 0;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
           }
           &:hover {
             color: $main-color;
@@ -200,6 +198,11 @@ body {
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media screen and (orientation: portrait) {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
   .wrapper-2-item {
     display: flex;
     flex-direction: column;
@@ -224,12 +227,20 @@ body {
   gap: 0 10%;
   align-items: center;
   justify-content: center;
+  @media screen and (orientation: portrait) {
+    padding: 3rem 0;
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
   .wrapper-3-img {
     width: 100%;
     height: 30rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (orientation: portrait) {
+      height: 15rem;
+    }
   }
   .wrapper-3-content {
     width: 90%;
@@ -237,6 +248,9 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    @media screen and (orientation: portrait) {
+      padding: 2rem 0;
+    }
     .wrapper-3-content-title {
       font-size: var(--step-3);
       font-weight: 600;
@@ -254,6 +268,7 @@ body {
 }
 .kids {
   background-image: url(../assets/graphics/kids.jpg);
+  grid-row: 3/4;
 }
 .party {
   background-image: url(../assets/graphics/party.jpg);
@@ -274,13 +289,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  @media screen and (orientation: portrait) {
+    padding: 2rem 0;
+    width: 90%;
+    flex-direction: column;
+  }
   .wrapper-4-content {
     background-color: $main-color;
     padding: 3rem;
     z-index: 1;
     width: 55%;
     margin-right: -5%;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      margin: auto;
+    }
     .wrapper-4-content-title {
       font-size: var(--step-3);
       font-weight: 600;
@@ -298,6 +321,11 @@ body {
     background-position: center;
     background-size: cover;
     z-index: 0;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      height: 25rem;
+      margin-top: 3rem;
+    }
   }
 }
 
@@ -309,6 +337,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media screen and (orientation: portrait) {
+    width: 90%;
+    margin: auto;
+    padding: 3rem 0;
+  }
   .wrapper-5-title {
     font-size: var(--step-3);
     font-weight: 600;
@@ -318,6 +351,10 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 4rem;
+    @media screen and (orientation: portrait) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+    }
     .wrapper-5-item {
       background-color: $gray;
       display: flex;
@@ -365,6 +402,10 @@ body {
   background-color: rgb(56, 56, 56);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media screen and (orientation: portrait) {
+    padding: 5rem 5%;
+    grid-template-columns: 1fr;
+  }
   .wrapper-6-content {
     width: 100%;
     display: flex;
@@ -392,6 +433,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+    margin-top: 2rem;
     background-color: $main-color;
     .wrapper-6-form-title {
       font-size: var(--step-3);
