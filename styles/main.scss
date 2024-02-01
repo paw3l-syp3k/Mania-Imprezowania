@@ -60,6 +60,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow-x: hidden;
   @media screen and (orientation: portrait) {
     background-image: unset;
   }
@@ -130,11 +131,18 @@ body {
           display: flex;
           z-index: 3;
         }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          width: 2.5rem;
+          height: 1.5rem;
+        }
         .line {
           width: 100%;
           height: 5px;
           background-color: black;
           transition: 150ms ease-in-out;
+          @media screen and (orientation: portrait) and (max-width: 450px) {
+            height: 4px;
+          }
         }
       }
       .active {
@@ -145,7 +153,7 @@ body {
       }
       .active .line:nth-child(1) {
         transform: rotate(45deg);
-        margin-bottom: -5px;
+        margin-bottom: -4px;
       }
       .active .line:nth-child(3) {
         transform: rotate(-45deg);
@@ -154,10 +162,19 @@ body {
   }
   .wrapper-1-content {
     margin: 5vmax 0 0 10%;
+    @media screen and (orientation: portrait) {
+      margin: 5vmax 0 0 5%;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      margin: 5vmax 0 0 2.5%;
+    }
     .wrapper-1-content-title {
       font-size: var(--step-5);
       font-weight: 500;
       z-index: -1;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-4);
+      }
       span {
         position: relative;
         &::before {
@@ -169,6 +186,10 @@ body {
           bottom: 1rem;
           left: 0;
           z-index: -1;
+          @media screen and (orientation: portrait) and (max-width: 450px) {
+            width: 50%;
+            bottom: 0.5rem;
+          }
         }
       }
     }
@@ -177,11 +198,19 @@ body {
       font-weight: 300;
       width: 45%;
       margin: 1.5rem 0 4.5rem 0;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 80%;
+        font-size: var(--step--1);
+      }
     }
+
     .wrapper-1-content-btn {
       padding: 0.7rem 2rem;
       font-size: var(--step-0);
       background-color: $main-color;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step--1);
+      }
       &:hover {
         transition: 150ms ease-in-out;
         background-color: $gray;
@@ -203,18 +232,31 @@ body {
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
   }
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    width: 95%;
+    padding: 2rem 1rem;
+  }
   .wrapper-2-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      text-align: center;
+    }
     .wrapper-2-item-number {
       font-size: var(--step-1);
       font-weight: 500;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-0);
+      }
     }
     .wrapper-2-item-description {
       font-size: var(--step-0);
       font-weight: 300;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step--1);
+      }
     }
   }
 }
@@ -241,6 +283,9 @@ body {
     @media screen and (orientation: portrait) {
       height: 15rem;
     }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      height: 10rem;
+    }
   }
   .wrapper-3-content {
     width: 90%;
@@ -254,11 +299,23 @@ body {
     .wrapper-3-content-title {
       font-size: var(--step-3);
       font-weight: 600;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step-2);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-1);
+      }
     }
     .wrapper-3-content-description {
       font-size: var(--step-0);
       font-weight: 300;
       margin-top: 1rem;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step--1);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step--2);
+      }
     }
   }
 }
@@ -280,6 +337,11 @@ body {
   background-image: url(../assets/graphics/test.png);
   background-position: center;
   background-size: cover;
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    height: 4rem;
+    margin: -2rem 0 2rem 0;
+    background-size: unset;
+  }
 }
 
 .wrapper-4 {
@@ -307,11 +369,23 @@ body {
     .wrapper-4-content-title {
       font-size: var(--step-3);
       font-weight: 600;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step-2);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-1);
+      }
     }
     .wrapper-4-content-description {
       font-size: var(--step-0);
       font-weight: 300;
       margin-top: 1.5rem;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step--1);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step--2);
+      }
     }
   }
   .wrapper-4-photo {
@@ -325,6 +399,9 @@ body {
       width: 100%;
       height: 25rem;
       margin-top: 3rem;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      height: 20rem;
     }
   }
 }
@@ -342,18 +419,30 @@ body {
     margin: auto;
     padding: 3rem 0;
   }
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    width: 95%;
+  }
   .wrapper-5-title {
     font-size: var(--step-3);
     font-weight: 600;
+    @media screen and (orientation: portrait) {
+      font-size: var(--step-2);
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      font-size: var(--step-1);
+    }
   }
   .wrapper-5-content {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 4rem;
+    column-gap: 4rem;
     @media screen and (orientation: portrait) {
       grid-template-columns: 1fr 1fr;
       row-gap: 2rem;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      grid-gap: 1rem;
     }
     .wrapper-5-item {
       background-color: $gray;
@@ -386,11 +475,23 @@ body {
         font-size: var(--step-1);
         font-weight: 400;
         margin: 1rem 0;
+        @media screen and (orientation: portrait) {
+          font-size: var(--step-0);
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          font-size: var(--step--1);
+        }
       }
       .wrapper-5-item-description {
         font-size: var(--step-0);
         font-weight: 300;
         text-align: center;
+        @media screen and (orientation: portrait) {
+          font-size: var(--step--1);
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          font-size: var(--step--2);
+        }
       }
     }
   }
@@ -406,6 +507,9 @@ body {
     padding: 5rem 5%;
     grid-template-columns: 1fr;
   }
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    padding: 3rem 2.5%;
+  }
   .wrapper-6-content {
     width: 100%;
     display: flex;
@@ -416,12 +520,24 @@ body {
       font-weight: 600;
       color: $white;
       margin-bottom: 2rem;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step-3);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-2);
+      }
     }
     .wrapper-6-content-description {
       font-size: var(--step-1);
       font-weight: 400;
       color: $white;
       margin: 1rem 0 1rem 0;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step-0);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step--1);
+      }
     }
     .main {
       color: $main-color;
@@ -440,6 +556,12 @@ body {
       grid-column: 1/5;
       padding: 1rem 0;
       color: $white;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step-2);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: var(--step-1);
+      }
     }
     .wrapper-6-form-input {
       background-color: $gray;
@@ -448,21 +570,36 @@ body {
       padding: 1rem;
       border-radius: 1rem;
       height: 2.5rem;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step--2);
+      }
       &:focus {
         outline: 2px solid black;
       }
     }
     #name {
       grid-column: 1/3;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        grid-column: 1/5;
+      }
     }
     #surname {
       grid-column: 3/5;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        grid-column: 1/5;
+      }
     }
     #phone {
       grid-column: 1/3;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        grid-column: 1/5;
+      }
     }
     #email {
       grid-column: 3/5;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        grid-column: 1/5;
+      }
     }
     #msg {
       grid-column: 1/5;
@@ -477,6 +614,12 @@ body {
       border: none;
       background-color: $white;
       border-radius: 1rem;
+      @media screen and (orientation: portrait) {
+        font-size: var(--step--2);
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        padding: 0.5rem 1.5rem;
+      }
       &:hover {
         background-color: rgb(16, 189, 16);
         color: $white;
