@@ -737,6 +737,7 @@ body {
   margin-top: 1rem;
   border: none;
   background-color: #f6f6f7;
+  color: black;
   border-radius: 1rem;
 }
 @media screen and (orientation: portrait) {
