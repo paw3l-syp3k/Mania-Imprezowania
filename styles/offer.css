@@ -80,7 +80,7 @@ body {
 }
 .wrapper-1 {
   width: 100%;
-  max-width: 2560px;
+  max-width: 1800px;
   min-height: 100vh;
   position: relative;
   background-color: #f6f6f7;
@@ -108,6 +108,11 @@ body {
   font-size: var(--step-3);
   font-weight: 500;
   line-height: 1.75rem;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-logo {
+    font-size: var(--step-2);
+  }
 }
 @media screen and (orientation: portrait) {
   .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-logo {
@@ -138,6 +143,11 @@ body {
   font-size: var(--step-1);
   font-weight: 400;
   padding: 0 1.5rem;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu .wrapper-1-menu-item {
+    font-size: var(--step-0);
+  }
 }
 @media screen and (orientation: portrait) {
   .wrapper-1 .wrapper-1-header .wrapper-1-header-navigation .wrapper-1-header-menu .wrapper-1-menu-item {
@@ -207,6 +217,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-content {
+    width: 80%;
+    padding: 6rem 0;
+  }
+}
 @media screen and (orientation: portrait) {
   .wrapper-1 .wrapper-1-content {
     width: 90%;
@@ -220,6 +236,11 @@ body {
 .wrapper-1 .wrapper-1-content .wrapper-1-content-title {
   font-weight: 600;
   font-size: var(--step-4);
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-content-title {
+    font-size: var(--step-3);
+  }
 }
 @media screen and (orientation: portrait) and (max-width: 450px) {
   .wrapper-1 .wrapper-1-content .wrapper-1-content-title {
@@ -252,6 +273,12 @@ body {
   color: black;
   border-radius: 1rem;
   font-size: var(--step--1);
+  font-weight: 400;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-menu .wrapper-1-menu-btn {
+    font-size: var(--step--2);
+  }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-menu .btn-active {
   background-color: #f1c40f;
@@ -286,7 +313,6 @@ body {
   height: 12rem;
   background-position: center;
   background-size: cover;
-  background-color: coral;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
 }
@@ -299,6 +325,11 @@ body {
   background-color: rgb(232, 232, 232);
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-container .wrapper-1-box .wrapper-1-box-title {
+    font-size: var(--step--2);
+  }
 }
 @media screen and (orientation: portrait) and (max-width: 450px) {
   .wrapper-1 .wrapper-1-content .wrapper-1-container .wrapper-1-box .wrapper-1-box-title {
@@ -319,6 +350,16 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (min-width: 2700px) {
+  .wrapper-2 {
+    padding: 5rem 25%;
+  }
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-2 {
+    padding: 5rem 10%;
+  }
+}
 @media screen and (orientation: portrait) {
   .wrapper-2 {
     padding: 5rem 5%;
@@ -338,9 +379,14 @@ body {
 }
 .wrapper-2 .wrapper-2-content .wrapper-2-content-title {
   font-size: var(--step-4);
-  font-weight: 600;
+  font-weight: 500;
   color: #f6f6f7;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-title {
+    font-size: var(--step-3);
+  }
 }
 @media screen and (orientation: portrait) {
   .wrapper-2 .wrapper-2-content .wrapper-2-content-title {
@@ -358,6 +404,11 @@ body {
   color: #f6f6f7;
   margin: 1rem 0 1rem 0;
   text-decoration: none;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-description {
+    font-size: var(--step-0);
+  }
 }
 @media screen and (orientation: portrait) {
   .wrapper-2 .wrapper-2-content .wrapper-2-content-description {
@@ -383,9 +434,15 @@ body {
 }
 .wrapper-2 .wrapper-2-form .wrapper-2-form-title {
   font-size: var(--step-3);
+  font-weight: 500;
   grid-column: 1/5;
   padding: 1rem 0;
   color: #f6f6f7;
+}
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .wrapper-2 .wrapper-2-form .wrapper-2-form-title {
+    font-size: var(--step-2);
+  }
 }
 @media screen and (orientation: portrait) {
   .wrapper-2 .wrapper-2-form .wrapper-2-form-title {
@@ -401,6 +458,7 @@ body {
   background-color: rgb(232, 232, 232);
   border: none;
   font-size: var(--step--1);
+  font-weight: 400;
   padding: 1rem;
   border-radius: 1rem;
   height: 2.5rem;
@@ -454,6 +512,7 @@ body {
 .wrapper-2 .wrapper-2-form .wrapper-2-form-btn {
   grid-column: 4/5;
   font-size: var(--step--1);
+  font-weight: 400;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border: none;
@@ -485,15 +544,15 @@ body {
 }
 
 .banki {
-  background-image: url(../assets/offer/banki.jpeg);
+  background-image: url(../assets/offer/banki.jpg);
 }
 
 .beczki {
-  background-image: url(../assets/offer/beczki.jpeg);
+  background-image: url(../assets/offer/beczki.jpg);
 }
 
 .bon {
-  background-image: url(../assets/offer/bon.jpeg);
+  background-image: url(../assets/offer/bon.jpg);
 }
 
 .brama {
@@ -501,19 +560,19 @@ body {
 }
 
 .bus {
-  background-image: url(../assets/offer/bus.jpeg);
+  background-image: url(../assets/offer/bus.jpg);
 }
 
 .candy {
-  background-image: url(../assets/offer/candy.jpeg);
+  background-image: url(../assets/offer/candy.jpg);
 }
 
 .dekoracja {
-  background-image: url(../assets/offer/dekoracja.jpeg);
+  background-image: url(../assets/offer/dekoracja.jpg);
 }
 
 .dmuchaniec {
-  background-image: url(../assets/offer/dmuchaniec.jpeg);
+  background-image: url(../assets/offer/dmuchaniec.jpg);
 }
 
 .drogowskaz {
@@ -521,7 +580,7 @@ body {
 }
 
 .dym {
-  background-image: url(../assets/offer/dym.jpeg);
+  background-image: url(../assets/offer/dym.jpg);
 }
 
 .fontanna_alko {
@@ -529,7 +588,7 @@ body {
 }
 
 .fontanna {
-  background-image: url(../assets/offer/fontanna.jpeg);
+  background-image: url(../assets/offer/fontanna.jpg);
 }
 
 .fotobudka {
@@ -537,11 +596,11 @@ body {
 }
 
 .golebie {
-  background-image: url(../assets/offer/golebie.jpeg);
+  background-image: url(../assets/offer/golebie.jpg);
 }
 
 .iskry {
-  background-image: url(../assets/offer/iskry.jpeg);
+  background-image: url(../assets/offer/iskry.jpg);
 }
 
 .kaskada {
@@ -553,11 +612,11 @@ body {
 }
 
 .konfetti {
-  background-image: url(../assets/offer/konfetti.jpeg);
+  background-image: url(../assets/offer/konfetti.jpg);
 }
 
 .lasery {
-  background-image: url(../assets/offer/lasery.jpeg);
+  background-image: url(../assets/offer/lasery.jpg);
 }
 
 .love {
@@ -565,19 +624,19 @@ body {
 }
 
 .mikolaj {
-  background-image: url(../assets/offer/mikolaj.jpeg);
+  background-image: url(../assets/offer/mikolaj.jpg);
 }
 
 .namiot {
-  background-image: url(../assets/offer/namiot.jpeg);
+  background-image: url(../assets/offer/namiot.jpg);
 }
 
 .niania {
-  background-image: url(../assets/offer/niania.jpeg);
+  background-image: url(../assets/offer/niania.jpg);
 }
 
 .piwo {
-  background-image: url(../assets/offer/piwo.jpeg);
+  background-image: url(../assets/offer/piwo.jpg);
 }
 
 .pokrowce {
@@ -585,7 +644,7 @@ body {
 }
 
 .popcorn {
-  background-image: url(../assets/offer/popcorn.jpeg);
+  background-image: url(../assets/offer/popcorn.jpg);
 }
 
 .przyczepa {
@@ -597,7 +656,7 @@ body {
 }
 
 .snieg {
-  background-image: url(../assets/offer/snieg.jpeg);
+  background-image: url(../assets/offer/snieg.jpg);
 }
 
 .swiatla {
@@ -609,11 +668,11 @@ body {
 }
 
 .wata {
-  background-image: url(../assets/offer/wata.jpeg);
+  background-image: url(../assets/offer/wata.jpg);
 }
 
 .wiejski_stol {
-  background-image: url(../assets/offer/wiejski_stol.jpeg);
+  background-image: url(../assets/offer/wiejski_stol.jpg);
 }
 
 .wodkowoz {
